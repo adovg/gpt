@@ -60,6 +60,14 @@ a {
     -webkit-text-fill-color: transparent;
 }
 
+.gradient__subtext {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 187%;
+    color: var(--color-subtext);
+}
+
 .section__padding {
     padding: 4rem 6rem;
 }

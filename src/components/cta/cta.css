@@ -1,0 +1,29 @@
+.gpt3__cta {
+    /* width: 100%; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 2rem;
+    margin: 4rem;
+
+    border: 1px solid #000;
+    border-radius: 0.69rem;
+
+    max-height: 10.81rem;
+
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    background: linear-gradient(90deg, #ae67fa 0%, #f49867 97.4%);
+}
+
+.gpt3__cta-content {
+}
+.gpt3__cta-content p {
+}
+.gpt3__cta-content h3 {
+}
+.gpt3__cta-btn {
+}
+.gpt3__cta-btn button {
+}

@@ -23,11 +23,6 @@
 }
 
 .gpt__features-subtext {
-    font-family: var(--font-family);
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 187%;
-    color: var(--color-subtext);
     margin-top: 2rem;
 }
 
