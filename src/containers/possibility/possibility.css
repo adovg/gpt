@@ -2,7 +2,6 @@
     width: 100%;
     display: flex;
     flex-direction: row;
-    /* flex: 1; */
 }
 
 .gpt3__possibility-img {
@@ -46,4 +45,25 @@
     color: #81afdd;
     padding-top: 1.4rem;
     padding-bottom: 1.875rem;
+}
+
+@media screen and (max-width: 960px) {
+    /* .gpt3__possibility {
+        position: relative;
+    }
+    .gpt3__possibility-img {
+        position: absolute;
+        z-index: -1;
+    }
+    .gpt3__possibility-content {
+        z-index: 5;
+    } */
+
+    .gpt3__possibility {
+        flex-direction: column;
+    }
+    .gpt3__possibility-img img {
+        max-width: 75%;
+        height: 100%;
+    }
 }

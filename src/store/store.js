@@ -1,4 +1,10 @@
 import { createStore } from "redux";
+import { blog01, blog02, blog03, blog04, blog05 } from "./imports.js";
+// import { today } from "./imports.js";
+
+let currentDate = new Date();
+currentDate.toDateString();
+console.log(currentDate);
 
 const defaultState = {
   featureContent: [
@@ -37,6 +43,35 @@ const defaultState = {
     {
       title: "Really boy law county",
       text: "Really boy law county she unable her sister. Feet you off its like like six. Among sex are leave law built now. In built table in an rapid blush.",
+    },
+  ],
+  blogPostsTitle: [
+    {
+      img: blog01,
+      date: currentDate,
+      title: "GPT-3 and Open  AI is the future. Let us exlore how it is?",
+    },
+  ],
+  blogPosts: [
+    {
+      img: blog02,
+      date: currentDate,
+      title: "GPT-3 and Open  AI is the future. Let us exlore how it is?",
+    },
+    {
+      img: blog03,
+      date: "Sep 26, 2021",
+      title: "GPT-3 and Open  AI is the future. Let us exlore how it is?",
+    },
+    {
+      img: blog04,
+      date: "Sep 26, 2021",
+      title: "GPT-3 and Open  AI is the future. Let us exlore how it is?",
+    },
+    {
+      img: blog05,
+      date: "Sep 26, 2021",
+      title: "GPT-3 and Open  AI is the future. Let us exlore how it is?",
     },
   ],
 };
