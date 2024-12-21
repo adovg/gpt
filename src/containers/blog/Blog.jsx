@@ -1,11 +1,23 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useSelector} from 'react-redux';
+import { useDispatch } from 'react-redux';
+import { setDate  } from '../../store/dateSlice';
 import './blog.css';
 import Article from '../../components/article/Article.jsx';
 
 export const Blog = () => {
 
-   const blogPost = useSelector(state => state.blogPosts);
+   const blogPost = useSelector(state => state.app.blogPosts);
+   const filteredPost = blogPost.slice(1);
+   const titlePost = blogPost.at(0);
+   const dispatch = useDispatch();
+   const currentDate = useSelector(state => state.date.currentDate);
+
+  useEffect(() => {
+    const currentDate = new Date().toLocaleDateString();
+    dispatch(setDate(currentDate)); // Отправляем дату в store
+  }, [dispatch]);
+
 
   return (
     <div className='gpt3__blog section__padding' id='blog'>
@@ -17,12 +29,13 @@ export const Blog = () => {
      </div>
      <div className="gpt3__blog-container">
         <div className="gpt3__blog-container__groupA">
-          <Article imgUrl={blogPost[0].img} date={blogPost[0].date} title={blogPost[0].title}/>
+          <Article imgUrl={titlePost.img} date={currentDate} title={titlePost.title}/>
         </div>
           <div className="gpt3__blog-container__groupB">
-            <Article imgUrl={blogPost[1].img} date={blogPost[1].date} title={blogPost[1].title}/>
-            <Article imgUrl={blogPost[2].img} date={blogPost[2].date} title={blogPost[2].title}/>
-            <Article imgUrl={blogPost[3].img} date={blogPost[3].date} title={blogPost[3].title}/>
+            {filteredPost.map((blogItem, index) => (
+              <Article imgUrl={blogItem.img} date={currentDate} title={blogItem.title} key={index} />
+            )
+            )}
           </div>
      </div>
     </div>

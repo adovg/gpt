@@ -5,7 +5,7 @@ import { Feature } from '../../components';
 
 export const Features = () => {
 
-  const featurePosts = useSelector(state => state.featurePosts);
+const featurePosts = useSelector(state => state.app.featurePosts);
 
   return (
     <div className='gpt3__features section__padding' id='features'>

@@ -5,14 +5,13 @@ import { Feature } from '../../components';
 
 export const WhatGPT3 = () => {
 
-  const featureTitles = useSelector( state => state.featureTitle);
-  const featureContent = useSelector(state => state.featureContent);
-
+  const featureContent = useSelector(state => state.app.featureContent);
+  const featureTitles = featureContent.at(0);
 
   return (
     <div className='gpt3__whatgpt3 section__margin'>
       <div className="gpt3__whatgpt3-feature">
-        <Feature title={featureTitles[0].title} text={featureTitles[0].text} />
+        <Feature title={featureTitles.title} text={featureTitles.text} />
       </div>  
       <div className="gpt3__whatgpt3-heading">
         <h1 className='gradient__text'>The possibilities are beyond your imagination</h1>
